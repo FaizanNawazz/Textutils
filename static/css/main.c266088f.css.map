@@ -1,0 +1,1 @@
+{"version":3,"file":"static/css/main.c266088f.css","mappings":"AAAA,yBACE,UACF,CAEA,wBACE,UACF","sources":["App.css"],"sourcesContent":[".light-mode::placeholder {\n  color: black;\n}\n\n.dark-mode::placeholder {\n  color: white;\n}\n"],"names":[],"sourceRoot":""}
