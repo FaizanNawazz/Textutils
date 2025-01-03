@@ -27,7 +27,7 @@ function App() {
       setmode('dark');
       document.body.style.backgroundColor='rgba(33,37,41,1)';
       showAlert("DarkMode is Enabled","success")
-       document.title='TextUtils - DarkMode';
+      //  document.title='TextUtils - DarkMode';
       // setInterval(() => {
       //   document.title='TextUtils is Amazing';
       // }, 2000);
@@ -40,19 +40,19 @@ function App() {
       setmode('light');
       document.body.style.backgroundColor='white';
       showAlert("LightMode is Enabled","success")
-      document.title='TextUtils - LightMode';
+      // document.title='TextUtils - LightMode';
     }
   }
   return (
     <>
-    <Router>
+    <Router future={{ v7_startTransition: true, v7_relativeSplatPath: true }}>
     <Navbar title="TextUtils" aboutText="About TextUtils" mode={mode} toggleMode={toggleMode} />
     <Alert alert={alert}/>
     <div className="container my-2">
     <Routes>
           <Route exact path="/about"element={<About mode={mode}/>}/>
           <Route exact path="/" element={<TextForm showAlert={showAlert} heading="Enter Text to Analyze Below" mode={mode} />}/>
-        </Routes>
+    </Routes>
       </div>
       </Router>
     </>
