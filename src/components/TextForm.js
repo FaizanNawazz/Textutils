@@ -37,16 +37,16 @@ export default function TextForm(props) {
     <h1>{props.heading}</h1>
   <textarea className={`form-control ${props.mode === 'light' ? 'light-mode' : 'dark-mode'}`} id="Mybox" value={text}  placeholder={"Type Here"} onChange={handleon} rows="8" style={{backgroundColor : props.mode === 'light'? 'white' :' rgba(33,37,41,1)', color : props.mode === 'light'? 'black' : 'white'}}></textarea>
   <div className="d-flex flex-column flex-sm-row justify-content-start mt-3">
-    <button className="btn btn-primary mb-2 mb-sm-0 me-sm-2" onClick={upClick}>
+    <button disabled={text.length===0} className="btn btn-primary mb-2 mb-sm-0 me-sm-2" onClick={upClick}>
       Convert To Uppercase
     </button>
-    <button className="btn btn-primary mb-2 mb-sm-0 me-sm-2" onClick={lowClick}>
+    <button disabled={text.length===0} className="btn btn-primary mb-2 mb-sm-0 me-sm-2" onClick={lowClick}>
       Convert To Lowercase
     </button>
-    <button className="btn btn-primary mb-2 mb-sm-0 me-sm-2" onClick={clearClick}>
+    <button disabled={text.length===0} className="btn btn-primary mb-2 mb-sm-0 me-sm-2" onClick={clearClick}>
       Clear Text
     </button>
-    <button className="btn btn-primary" onClick={speak}>
+    <button disabled={text.length===0} className="btn btn-primary" onClick={speak}>
       Speak
     </button>
   </div>
